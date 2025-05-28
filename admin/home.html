@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token 管理</title>
+  <style>
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {font-family: "Microsoft YaHei", sans-serif; background: #f8f9fa; color: #333; padding: 20px;}
+    .card {background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 20px; max-width: 800px; margin: 0 auto;}
+    .header {background: #4267b2; color: #fff; padding: 10px 20px; border-radius: 6px; display: inline-block; font-size: 1.1rem; margin-bottom: 20px;}
+    .flex {display: flex; align-items: center;}
+    .flex-between {justify-content: space-between;}
+    .section {margin-bottom: 20px;}
+    .section .label {font-weight: bold; margin-right: 10px;}
+    .btn {background: #4267b2; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;}
+    .btn:hover {background: #365899;}
+    table {width: 100%; border-collapse: collapse; margin-top: 10px;}
+    th, td {border: 1px solid #ddd; padding: 8px; text-align: center;}
+    th {background: #4267b2; color: #fff;}
+    tr:nth-child(even) {background: #f2f6fc;}
+    .note {border: 1px solid #4267b2; border-radius: 4px; padding: 10px; color: #333;}
+    .note-title {font-weight: bold; margin-bottom: 6px;}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">当前版本：v2.2</div>
+    <div class="section flex flex-between">
+      <div class="flex">
+        <div class="label">管理秘钥：</div>
+        <div>e6fb4d17–20eb–4a0a–85a7–7c82a0bd130b</div>
+      </div>
+      <button class="btn">新增TOKEN</button>
+    </div>
+    <div class="section">
+      <div class="label">token 管理列表：</div>
+      <table>
+        <thead>
+          <tr><th>token</th><th>wxid</th><th>昵称</th><th>状态</th><th>到期时间</th><th>回调Url</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5c631564–267c–4307–a662–03bba384df5d</td>
+            <td>dd23com</td>
+            <td>流星</td>
+            <td>在线</td>
+            <td>2026-05-06</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="section note">
+      <div class="note-title">说明：</div>
+      <div>最多2个token，也就是再多同时两个账户登录</div>
+      <div>设置回调地址后，redis 将不在起作用</div>
+    </div>
+  </div>
+</body>
+</html>

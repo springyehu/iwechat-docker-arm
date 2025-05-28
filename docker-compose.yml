@@ -1,0 +1,9 @@
+version: "3"
+services:
+  myapp:
+    build: .
+    image: iwe:v1.0
+    ports:
+      - "8849:8849"
+    # volumes:
+      # - /Users/pllx/Web/wechat/host_assets:/app/assets
